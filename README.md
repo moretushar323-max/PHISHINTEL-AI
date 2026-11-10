@@ -132,3 +132,24 @@ Built a Python and Streamlit-based SOC investigation tool that parses suspicious
 ## Portfolio screenshots
 
 Capture: dashboard, correlated verdict, headers, URL/DNS analysis, VirusTotal, AI assessment, investigation history, case management, IOC inventory, PDF report and synthetic Detection Lab. Hide API keys and personal/confidential data.
+
+## PHISHINTEL AI — Application Screenshots
+
+The following screenshots demonstrate the phishing investigation workflow using synthetic test data.
+
+### 1. Email Investigation Dashboard
+![Email Investigation Dashboard](screenshots/01-dashboard.png)
+
+### 2. Correlated Investigation Verdict
+![Correlated Investigation Verdict](screenshots/02-investigation-verdict.png)
+
+### 3. Correlated Evidence
+![Correlated Evidence](screenshots/03-correlated-evidence.png)
+
+### 4. Investigation Report and Analysis Workspace
+![Investigation Report](screenshots/04-investigation-report.png)
+
+### 5. Category Score Breakdown
+![Category Score Breakdown](screenshots/05-category-score-breakdown.png)
+
+> These screenshots show an investigation performed using a synthetic email. The displayed risk assessment is specific to that test case.
