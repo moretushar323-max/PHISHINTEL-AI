@@ -1,0 +1,62 @@
+# Secrets and virtual environments
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local investigation data (may contain sensitive emails)
+database/*.db
+
+# Environment files
+.env.*
+!.env.example
+
+# Additional Python caches
+.mypy_cache/
+.ruff_cache/
+
+# Local databases
+database/*.sqlite
+database/*.sqlite3
+
+# Generated investigation reports
+reports/*.pdf
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# OS files
+Thumbs.db
+
+# Environment files
+.env.*
+!.env.example
+
+# Additional Python caches
+.mypy_cache/
+.ruff_cache/
+
+# Local databases
+database/*.sqlite
+database/*.sqlite3
+
+# Generated investigation reports
+reports/*.pdf
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# OS files
+Thumbs.db

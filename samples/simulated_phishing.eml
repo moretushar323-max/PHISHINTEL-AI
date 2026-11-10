@@ -1,0 +1,17 @@
+From: Microsoft 365 Security <security-alert@micros0ft-example.test>
+To: analyst@example.test
+Reply-To: account-support@unknown-example.test
+Return-Path: bounce@unknown-example.test
+Subject: URGENT: Your Microsoft 365 Account Will Be Suspended
+Date: Tue, 10 Nov 2026 09:45:00 +0530
+Message-ID: <security-alert-20261110@unknown-example.test>
+Authentication-Results: mail.example.test; spf=fail; dkim=fail; dmarc=fail
+
+SIMULATED TRAINING EMAIL — DO NOT CLICK OR VISIT THE LINK.
+
+We detected unusual login activity on your account. Your account access will be suspended within 24 hours unless you verify your identity.
+
+Please verify your account immediately. Enter your password to restore access:
+http://192.0.2.10/microsoft/login
+
+This is a synthetic example using reserved .test and documentation IP space.

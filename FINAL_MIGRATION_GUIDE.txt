@@ -1,0 +1,40 @@
+PHISHINTEL AI — ONE-TIME REBRANDED INSTALLATION
+
+Before starting: stop the old Streamlit app with Ctrl+C. Make sure the downloaded ZIP is in ~/Downloads.
+
+Run this entire block in Ubuntu Terminal. It backs up the old PhishGuardAI folder, extracts the new PhishIntelAI folder, and preserves your .env and SQLite database when present.
+
+```bash
+set -e
+cd ~
+ZIP="$HOME/Downloads/PHISHINTEL_AI_Final_Package.zip"
+[ -f "$ZIP" ] || { echo "ZIP not found: $ZIP"; exit 1; }
+BACKUP="$HOME/PhishGuardAI_Backup_$(date +%Y%m%d_%H%M%S)"
+if [ -d "$HOME/PhishGuardAI" ]; then
+  mv "$HOME/PhishGuardAI" "$BACKUP"
+  echo "Old project backed up to $BACKUP"
+fi
+if [ -d "$HOME/PhishIntelAI" ]; then
+  mv "$HOME/PhishIntelAI" "$HOME/PhishIntelAI_Previous_$(date +%Y%m%d_%H%M%S)"
+fi
+unzip -q "$ZIP" -d "$HOME"
+if [ -n "${BACKUP:-}" ] && [ -d "$BACKUP" ]; then
+  [ ! -f "$BACKUP/.env" ] || cp "$BACKUP/.env" "$HOME/PhishIntelAI/.env"
+  if [ -f "$BACKUP/database/investigations.db" ]; then
+    cp "$BACKUP/database/investigations.db" "$HOME/PhishIntelAI/database/investigations.db"
+  fi
+fi
+cd "$HOME/PhishIntelAI"
+chmod +x install.sh run.sh
+./install.sh
+./run.sh
+```
+
+Then open http://localhost:8501
+
+To run tests in a second terminal:
+  cd ~/PhishIntelAI
+  source .venv/bin/activate
+  python -m unittest discover -s tests -v
+
+Keep the backup folder until you have confirmed the app, saved investigations, and VirusTotal configuration work. Never upload or share .env.
